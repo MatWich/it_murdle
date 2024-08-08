@@ -1,25 +1,30 @@
-img {
-    width: 5rem;
-    height: 5rem;
-    display: flex;
-    justify-content: space-around;
+h3 ,h4 {
+    text-align: center;
 }
 
-h3 ,h4 {
-    text-align: center
+.container {
+    display: flex;
+    justify-content: center;
 }
 
 .rectangle {
-    width: 300px;
-    height: 200px;
+    width: 12rem;
+    height: 16rem;
     background-color: lightgray;
     border: 2px solid black;
     border-radius: 10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-center: center;
+    align-items: center;
+    box-sizing: center;
+}
+
+.rectangle img {
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .center {
