@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { DATA } from './data';
 import { HeaderComponent } from './header/header.component';
 import { SuspectInfoComponent } from './suspect-info/suspect-info.component';
 import { TextInputComponent } from './text-input/text-input.component';
@@ -13,8 +14,14 @@ import { TextInputComponent } from './text-input/text-input.component';
 })
 export class AppComponent {
   headerText: string = "Change me!!!"
+  selectedCase = 0;
 
   onTextChanged(newText: string) {
     this.headerText = newText;
+    
+  }
+
+  get selectedCaseData() {
+      return DATA.cases[this.selectedCase];
   }
 }

@@ -1,3 +1,6 @@
 <app-header [headerText]="headerText"></app-header>
 <app-text-input (textChanged)="onTextChanged($event)"></app-text-input>
-<app-suspect-info></app-suspect-info>
+
+@for(suspect of selectedCaseData.suspects; track suspect.id) {
+    <app-suspect-info [suspect]="suspect"></app-suspect-info>
+}

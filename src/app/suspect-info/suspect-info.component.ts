@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { type Suspect } from './suspect.model';
 
 @Component({
   selector: 'app-suspect-info',
@@ -8,7 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './suspect-info.component.css'
 })
 export class SuspectInfoComponent {
-  imageUrl: string = "../../assets/256.png"
-  suspectName: string = "Cambridge Jenkins";
-  suspectInfo: string = "Likes to build stuff but for some unknown reasons throws big stack trace."
+  @Input({required: true}) suspect!: Suspect
 }
