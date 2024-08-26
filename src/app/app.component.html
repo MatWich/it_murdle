@@ -1,23 +1,20 @@
 <app-header />
 <div class="container">
-    <div class="left-panel">
-        <app-suspect-info 
-            header="Suspects" 
-            [suspects]="selectedCaseData.suspects">
-        </app-suspect-info>
-        <app-suspect-info
-            header="Places" 
-            [suspects]="selectedCaseData.places">
-        </app-suspect-info>
-        <app-suspect-info 
-            header="Weapons" 
-            [suspects]="selectedCaseData.weapons">
-        </app-suspect-info>
+        <div class="left-panel">
+            <app-suspect-info 
+                header="Suspects" 
+                [suspects]="selectedCaseData.suspects">
+            </app-suspect-info>
+            <app-suspect-info
+                header="Places" 
+                [suspects]="selectedCaseData.places">
+            </app-suspect-info>
+            <app-suspect-info 
+                header="Weapons" 
+                [suspects]="selectedCaseData.weapons">
+            </app-suspect-info>
+        </div>
+        <div class="right-panel">
+            <app-lore [lore]="selectedCaseData.introduction" />
+        </div>
     </div>
-    <div class="right-panel">
-        <app-lore [lore]="selectedCaseData.introduction" />
-    </div>
-</div>
-
-
-
