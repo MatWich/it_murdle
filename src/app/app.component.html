@@ -1,6 +1,10 @@
 <app-header [headerText]="headerText"></app-header>
 <app-text-input (textChanged)="onTextChanged($event)"></app-text-input>
 
-@for(suspect of selectedCaseData.suspects; track suspect.id) {
-    <app-suspect-info [suspect]="suspect"></app-suspect-info>
-}
+<ul class="parent">
+    @for(suspect of selectedCaseData.suspects; track suspect.id) {
+        <li class="child">
+            <app-suspect-info [suspect]="suspect"></app-suspect-info>
+        </li>
+    }
+</ul>
