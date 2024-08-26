@@ -17,7 +17,6 @@ export class AppComponent {
 
   onTextChanged(newText: string) {
     this.headerText = newText;
-    
   }
 
   get selectedCaseData() {
