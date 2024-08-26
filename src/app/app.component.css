@@ -10,3 +10,33 @@
 ul {
     list-style-type: none;
 }
+
+.container {
+  display: flex;
+  height: 100vh; /* Pełna wysokość okna przeglądarki */
+}
+
+.left-panel {
+  flex: 1; /* Zajmuje pozostałą przestrzeń */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Odstęp między kwadratami */
+  padding-right: 20px;
+  background-color: #f0f0f0; /* Opcjonalne tło */
+}
+
+.right-panel {
+  flex: 1; /* Zajmuje pozostałą przestrzeń */
+  padding: 20px;
+  background-color: #e0e0e0; /* Opcjonalne tło */
+}
+
+.right-panel h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.right-panel p {
+  font-size: 16px;
+  margin-top: 10px;
+}
