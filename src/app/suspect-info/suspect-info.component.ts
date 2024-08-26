@@ -9,5 +9,5 @@ import { type Suspect } from './suspect.model';
   styleUrl: './suspect-info.component.css'
 })
 export class SuspectInfoComponent {
-  @Input({required: true}) suspect!: Suspect
-}
+  @Input({required: true}) suspects!: Suspect[] ;
+  @Input({required: true}) header!: string;}

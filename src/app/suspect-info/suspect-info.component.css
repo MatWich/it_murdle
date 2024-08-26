@@ -1,19 +1,43 @@
-.rectangle {
-    width: 12rem;
-    height: 16rem;
-    background-color: lightgray;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: center;
+.container {
+  margin-top: 20px;
+  padding-left: 20px; /* Opcjonalnie, odstęp od lewej krawędzi strony */
 }
 
-.rectangle img {
-    width: 6rem;
-    height: 6rem;
-    object-fit: cover;
-    margin-bottom: 15px;
+.header-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center; /* Wyśrodkowanie nagłówka względem kwadratów */
+  width: calc(3 * 10rem + 2 * 3rem); /* Szerokość równa szerokości trzech kwadratów + odstępy między nimi */
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.squares {
+  display: flex;
+  justify-content: flex-start; /* Wyrównanie kwadratów do lewej */
+  gap: 1rem; /* Odstęp między kwadratami */
+}
+
+.square {
+  width: 10rem;
+  height: 16rem;
+  background-color: lightgray;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: center;
+}
+
+.square img {
+   width: auto;
+  height: 6rem;
+  object-fit: scale-down;
 }

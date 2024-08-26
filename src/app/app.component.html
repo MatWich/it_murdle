@@ -1,8 +1,15 @@
 <app-header />
-<ul class="parent">
-    @for(suspect of selectedCaseData.suspects; track suspect.id) {
-        <li class="child">
-            <app-suspect-info [suspect]="suspect"></app-suspect-info>
-        </li>
-    }
-</ul>
+
+<app-suspect-info 
+    header="Suspects" 
+    [suspects]="selectedCaseData.suspects">
+</app-suspect-info>
+<app-suspect-info
+    header="Places" 
+    [suspects]="selectedCaseData.places">
+</app-suspect-info>
+<app-suspect-info 
+    header="Waepons" 
+    [suspects]="selectedCaseData.weapons">
+</app-suspect-info>
+

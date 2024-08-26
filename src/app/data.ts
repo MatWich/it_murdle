@@ -2,7 +2,7 @@ export const DATA = {
     cases: [
             {
             id: '1',
-            title: 'Treachery in build castle',
+            title: 'Treachery in Build Castle',
             suspects: [
                 {
                     id: '1',
@@ -32,14 +32,14 @@ export const DATA = {
                 },
                 {
                     id: '2',
-                    image: '../assets/arti.png',
                     name: 'Artifactory',
+                    image: '../assets/arti.png',
                     description: 'A factory for artifacts but not for building.'
                 },
                 {
                     id: '3',
-                    image: '../assets/m2.png',
                     name: '.m2',
+                    image: '../assets/m2.png',
                     description: 'Nobody know what can you find inside it.'
                 }
             ],
