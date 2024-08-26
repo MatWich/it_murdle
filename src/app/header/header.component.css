@@ -1,10 +1,12 @@
 /* Stylowanie kontenera nagłówka */
 header {
     background-color: #f8f9fa; /* Jasny szary kolor tła */
-    padding: 20px 0; /* Odstępy w pionie dla nagłówka */
-    text-align: center; /* Wyśrodkowanie tekstu */
+    padding: 20px; /* Odstępy wokół zawartości nagłówka */
     position: relative; /* Ustawienie pozycji do stworzenia paska */
     font-family: 'Arial', sans-serif; /* Użycie czytelnej czcionki */
+    display: flex;
+    align-items: center; /* Wyśrodkowanie w pionie */
+    justify-content: space-between; /* Rozmieszczenie zawartości w poziomie */
 }
 
 /* Pasek oddzielający header od reszty strony */
@@ -19,11 +21,41 @@ header::after {
     left: 0; /* Przesunięcie do lewej strony */
 }
 
-/* Stylowanie tekstu tytułu */
-header h1 {
-    margin: 0; /* Usunięcie marginesów */
-    font-size: 24px; /* Ustawienie rozmiaru czcionki */
+/* Stylowanie zawartości nagłówka */
+.header-content {
+    display: flex;
+    align-items: center; /* Wyśrodkowanie w pionie */
+    width: 100%; /* Cała szerokość nagłówka */
+    justify-content: space-between; /* Rozmieszczenie zawartości w poziomie */
+    position: relative; /* Ustawienie pozycji do umiejscowienia środkowego tekstu */
+}
+
+/* Stylowanie obrazka użytkownika */
+.user-image {
+    width: 30%; /* Szerokość obrazka */
+    height: auto; /* Wysokość automatyczna, aby zachować proporcje */
+    border-radius: 4px; /* Opcjonalne zaokrąglenie krawędzi */
+    object-fit: cover; /* Dopasowanie obrazka do kontenera */
+}
+
+/* Stylowanie nazwy użytkownika */
+.user-name {
+    width: 100px; /* Szerokość kontenera dla nazwy użytkownika */
+    text-align: right; /* Wyrównanie tekstu do prawej */
+    font-size: 18px; /* Rozmiar czcionki */
     color: #343a40; /* Kolor tekstu (ciemny szary) */
-    font-weight: bold; /* Pogrubienie czcionki */
-    z-index: 1; /* Ustawienie warstwy nad paskiem */
+}
+
+/* Stylowanie tekstu na środku */
+.center-text {
+    position: absolute; /* Pozycjonowanie absolutne dla wyśrodkowania */
+    left: 50%; /* Przesunięcie do połowy szerokości */
+    transform: translateX(-50%); /* Wyśrodkowanie elementu względem środka */
+    font-size: 20px; /* Rozmiar czcionki dla tekstu centralnego */
+    color: #343a40; /* Kolor tekstu */
+}
+
+h2 {
+    font-family: 'MyCustomFont';
+    font-size: 4rem;
 }

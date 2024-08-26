@@ -7,5 +7,11 @@ import { Component, Input } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  @Input() headerText: string = 'IT Murdle';
+  headerText: string = 'IT Murdle';
+  @Input({required: true}) title!: string
+
+
+  get pageTitle() {
+    return this.title ? this.title : 'Lets start solving mysteries!'
+  }
 }
