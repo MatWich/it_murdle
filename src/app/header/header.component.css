@@ -1,0 +1,29 @@
+/* Stylowanie kontenera nagłówka */
+header {
+    background-color: #f8f9fa; /* Jasny szary kolor tła */
+    padding: 20px 0; /* Odstępy w pionie dla nagłówka */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    position: relative; /* Ustawienie pozycji do stworzenia paska */
+    font-family: 'Arial', sans-serif; /* Użycie czytelnej czcionki */
+}
+
+/* Pasek oddzielający header od reszty strony */
+header::after {
+    content: ""; /* Pusty element generowany */
+    display: block; /* Blokowy wygląd */
+    width: 100%; /* Szerokość na całym ekranie */
+    height: 4px; /* Wysokość paska */
+    background-color: #007bff; /* Kolor paska (niebieski) */
+    position: absolute; /* Absolutne pozycjonowanie na dole nagłówka */
+    bottom: 0; /* Ustawienie na dole nagłówka */
+    left: 0; /* Przesunięcie do lewej strony */
+}
+
+/* Stylowanie tekstu tytułu */
+header h1 {
+    margin: 0; /* Usunięcie marginesów */
+    font-size: 24px; /* Ustawienie rozmiaru czcionki */
+    color: #343a40; /* Kolor tekstu (ciemny szary) */
+    font-weight: bold; /* Pogrubienie czcionki */
+    z-index: 1; /* Ustawienie warstwy nad paskiem */
+}

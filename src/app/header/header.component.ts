@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  @Input() headerText: string = 'Default text';
+  @Input() headerText: string = 'IT Murdle';
 }
