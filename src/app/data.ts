@@ -3,6 +3,7 @@ export const DATA = {
             {
             id: '1',
             title: 'Treachery in Build Castle',
+            introduction: 'Developer came back from the long journey of OoO. Just in the right time to find failed builds.',
             suspects: [
                 {
                     id: '1',
@@ -69,7 +70,10 @@ export const DATA = {
                 "clue3",
                 "clue4",
                 "clue5"
-            ]
+            ],
+            hint: "clue4 correct checks",
+            additionalHint: "Same additional info that is not given directly by other clues",
+            correctAnswer: "Who, where and with what killed" 
         
         }
     ]
