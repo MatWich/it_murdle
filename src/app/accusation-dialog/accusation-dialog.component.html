@@ -3,9 +3,9 @@
     <h2>👾Make your accusation👾</h2>
     <form (ngSubmit)="onSubmit()">
        
-            <label for="Who">Who</label>
+            <label for="who">Who</label>
             <div class="select">
-                <select [(ngModel)]="model.who" name="who">
+                <select id="who" [(ngModel)]="model.who" name="who">
                     <option disabled selected>--Select--</option>
                     <option *ngFor="let item of whoOptions" [value]="item">
                         {{item}}
@@ -16,9 +16,9 @@
            
         
         
-            <label for="How">How</label>
+            <label for="how">How</label>
             <div class="select">
-                <select [(ngModel)]="model.how" name="how">
+                <select id="how" [(ngModel)]="model.how" name="how">
                     <option disabled selected>--Select--</option>
                     <option *ngFor="let where of whereOptions" [value]="where">
                         {{ where }}
@@ -28,9 +28,9 @@
             </div>
         
         
-            <label for="Where">Where</label>
+            <label for="where">Where</label>
             <div class="select">
-                <select [(ngModel)]="model.where" name="where">
+                <select id="where" [(ngModel)]="model.where" name="where">
                     <option disabled selected>--Select--</option>
                     <option *ngFor="let how of howOptions" [value]="how">
                         {{ how }}
