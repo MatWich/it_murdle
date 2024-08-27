@@ -2,30 +2,43 @@
 <dialog open>
     <h2>👾Make your accusation👾</h2>
     <form (ngSubmit)="onSubmit()">
-        <p>
+       
             <label for="Who">Who</label>
-            <select [(ngModel)]="selectedWho" name="selectedWho">
-                <option *ngFor="let item of whoOptions" [value]="item">
-                    {{item}}
-                </option>
-            </select>
-        </p>
-        <p>
+            <div class="select">
+                <select [(ngModel)]="model.who" name="who">
+                    <option disabled selected>--Select--</option>
+                    <option *ngFor="let item of whoOptions" [value]="item">
+                        {{item}}
+                    </option>
+                </select>
+                <div class="select_arrow"></div>
+            </div>
+           
+        
+        
             <label for="How">How</label>
-            <select [(ngModel)]="selectedHow" name="selectedHow">
-                <option *ngFor="let where of whereOptions" [value]="where">
-                    {{ where }}
-                </option>
-            </select>
-        </p>
-        <p>
+            <div class="select">
+                <select [(ngModel)]="model.how" name="how">
+                    <option disabled selected>--Select--</option>
+                    <option *ngFor="let where of whereOptions" [value]="where">
+                        {{ where }}
+                    </option>
+                </select>
+                <div class="select_arrow"></div>
+            </div>
+        
+        
             <label for="Where">Where</label>
-            <select [(ngModel)]="selectedWhere" name="selectedWhere">
-                <option *ngFor="let how of howOptions" [value]="how">
-                    {{ how }}
-                </option>
-            </select>
-        </p>
+            <div class="select">
+                <select [(ngModel)]="model.where" name="where">
+                    <option disabled selected>--Select--</option>
+                    <option *ngFor="let how of howOptions" [value]="how">
+                        {{ how }}
+                    </option>
+                </select>
+                <div class="select_arrow"></div>
+            </div>
+        
 
         <p class="actions">
             <button class="cancelBtn" type="button" (click)="onCancel()">Cancel</button>

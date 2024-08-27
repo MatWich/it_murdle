@@ -1,7 +1,7 @@
 import { NgFor } from '@angular/common';
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, ModelFunction } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { type AccusationModel } from './acusationForm.model';
+import { AccusationModel } from './acusationForm.model';
 
 @Component({
   selector: 'app-accusation-dialog',
@@ -13,9 +13,10 @@ import { type AccusationModel } from './acusationForm.model';
 export class AccusationDialogComponent {
 
   @Output() close = new EventEmitter();
-  selectedWhere: string = '';
-  selectedWho: string = '';
-  selectedHow: string = '';
+  model: AccusationModel;
+  selectedWhere: string = '--Select--';
+  selectedWho: string = '--Select--';
+  selectedHow: string = '--Select--';
 
   whereOptions = ['Here', 'There', 'Anywhere'];
   howOptions = ['Option1', 'Option2', 'Option3'];
@@ -26,8 +27,16 @@ export class AccusationDialogComponent {
   }
 
   onSubmit() {
-    // TODO: Some walidation and maybe toast if correct or wrong? Do it by service
-    console.log("Are you sure?");
+    // TODO: Toast if correct or wrong? Do it by service
+    if(this.model.areAllFilled()) {
+      console.log("all good go on");
+    } else {
+      console.log("Cmon fill all the fields");
+    }
     this.close.emit();
   }
+
+  constructor() {
+    this.model = new AccusationModel();
+   }
 }
