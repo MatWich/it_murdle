@@ -40,3 +40,25 @@ ul {
   font-size: 16px;
   margin-top: 10px;
 }
+
+.accusation-button {
+    display: inline-block;
+    padding: 15px 30px; /* Duże odstępy wewnętrzne, aby przycisk był większy */
+    background: linear-gradient(90deg, #ff4d4d, #ff0000); /* Gradient od jaśniejszego do ciemniejszego czerwonego */
+    border: none; /* Bez obramowania */
+    border-radius: 5px; /* Opcjonalne zaokrąglenie krawędzi */
+    color: white; /* Kolor tekstu */
+    font-size: 2rem; /* Duża czcionka */
+    font-weight: bold; /* Pogrubienie tekstu */
+    text-align: center; /* Wyśrodkowanie tekstu wewnątrz przycisku */
+    cursor: pointer; /* Kursor wskazujący na możliwość kliknięcia */
+    margin: 0 auto; /* Automatyczne marginesy dla wyśrodkowania przycisku */
+    display: block; /* Ustawienie elementu na blokowy, aby działało centrowanie */
+    width: 30rem; /* Szerokość przycisku */
+    text-transform: uppercase; /* Wymuszenie wielkich liter */
+    font-family: 'BloodyFont';
+}
+
+.accusation-button:hover {
+    background: linear-gradient(90deg, #ff6666, #ff3333); /* Jaśniejszy gradient przy najechaniu myszką */
+}
