@@ -1,7 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AccusationModel } from './acusationForm.model';
+import { type AccusationModel } from './acusationForm.model';
 
 @Component({
   selector: 'app-accusation-dialog',
