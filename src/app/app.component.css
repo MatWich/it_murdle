@@ -47,7 +47,7 @@ ul {
     background: linear-gradient(90deg, #ff4d4d, #ff0000); /* Gradient od jaśniejszego do ciemniejszego czerwonego */
     border: none; /* Bez obramowania */
     border-radius: 5px; /* Opcjonalne zaokrąglenie krawędzi */
-    color: white; /* Kolor tekstu */
+    color: black; /* Kolor tekstu */
     font-size: 2rem; /* Duża czcionka */
     font-weight: bold; /* Pogrubienie tekstu */
     text-align: center; /* Wyśrodkowanie tekstu wewnątrz przycisku */

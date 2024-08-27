@@ -1,0 +1,35 @@
+<div class="backdrop" (click)="onCancel()"></div>
+<dialog open>
+    <h2>👾Make your accusation👾</h2>
+    <form (ngSubmit)="onSubmit()">
+        <p>
+            <label for="Who">Who</label>
+            <select [(ngModel)]="selectedWho" name="selectedWho">
+                <option *ngFor="let item of whoOptions" [value]="item">
+                    {{item}}
+                </option>
+            </select>
+        </p>
+        <p>
+            <label for="How">How</label>
+            <select [(ngModel)]="selectedHow" name="selectedHow">
+                <option *ngFor="let where of whereOptions" [value]="where">
+                    {{ where }}
+                </option>
+            </select>
+        </p>
+        <p>
+            <label for="Where">Where</label>
+            <select [(ngModel)]="selectedWhere" name="selectedWhere">
+                <option *ngFor="let how of howOptions" [value]="how">
+                    {{ how }}
+                </option>
+            </select>
+        </p>
+
+        <p class="actions">
+            <button type="button" (click)="onCancel()">Cancel</button>
+            <button type="submit">Create</button>
+        </p>
+    </form>
+</dialog>
