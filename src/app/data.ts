@@ -15,7 +15,7 @@ export const DATA = {
                     id: '2',
                     name: 'Heavy Lifter Gopher',
                     image: '../assets/gopher_lifter.png',
-                    description: 'He runs everything in this place no job or constainer will do enything without him.'
+                    description: 'He runs everything in this place no job or constainer will do anything without him.'
                 },
                 {
                     id: '3',
