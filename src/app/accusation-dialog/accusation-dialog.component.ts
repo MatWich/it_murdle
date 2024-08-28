@@ -1,12 +1,13 @@
 import { NgFor } from '@angular/common';
 import { Component, Output, EventEmitter, ModelFunction } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { LoreComponent } from '../lore/lore.component';
 import { AccusationModel } from './acusationForm.model';
 
 @Component({
   selector: 'app-accusation-dialog',
   standalone: true,
-  imports: [FormsModule, NgFor],
+  imports: [FormsModule, NgFor, LoreComponent],
   templateUrl: './accusation-dialog.component.html',
   styleUrl: './accusation-dialog.component.css'
 })

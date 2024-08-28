@@ -1,3 +1,32 @@
-.custom-font h1 {
-  font-family: 'StoryFont';
+/* Wyśrodkowanie kontenera na stronie */
+.resizable-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Wyśrodkowanie elementów w poziomie */
+  justify-content: center; /* Wyśrodkowanie elementów w pionie */
+  width: 95%; /* Szerokość kontenera */
+  margin: 0 auto; /* Wyśrodkowanie kontenera w poziomie */
+}
+
+/* Stylowanie paragrafów */
+.resizable-paragraph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+  padding: 10px;
+  font-size: calc(1em + 1vw); /* Rozmiar tekstu, który zwiększa się wraz z szerokością ekranu */
+  line-height: 1.5;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  min-height: 3em;
+  width: 100%; /* Szerokość paragrafu w kontenerze */
+  word-wrap: break-word;
+  font-family: 'StoryFont'; /* Czcionka */
+}
+
+/* Stylowanie emotikonów */
+.emoji {
+  font-size: inherit; /* Emotikona odziedzicza rozmiar fontu z rodzica */
+  margin: 0 5px; /* Odstępy wokół emotikony */
 }

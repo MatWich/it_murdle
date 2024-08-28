@@ -16,6 +16,7 @@ import { SuspectInfoComponent } from './suspect-info/suspect-info.component';
 export class AppComponent {
   selectedCase = 0;
   isMakingAcusation = false;
+  storyEmote = '📓';
 
   get selectedCaseData() {
       return DATA.cases[this.selectedCase];

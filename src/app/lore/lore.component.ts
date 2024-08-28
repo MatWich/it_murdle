@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class LoreComponent {
   @Input({required: true}) lore!: string;
+  @Input({required: true}) emote!: string;
 }
