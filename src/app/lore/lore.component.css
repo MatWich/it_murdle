@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center; /* Wyśrodkowanie elementów w poziomie */
   justify-content: center; /* Wyśrodkowanie elementów w pionie */
-  width: 90%; /* Szerokość kontenera */
+  width: 95%; /* Szerokość kontenera */
   margin: 0 auto; /* Wyśrodkowanie kontenera w poziomie */
 }
 
