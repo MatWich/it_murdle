@@ -1,0 +1,22 @@
+.square-button {
+  width: 100px; /* Szerokość przycisku */
+  height: 100px; /* Wysokość przycisku, taka sama jak szerokość, aby był kwadratowy */
+  border: 2px solid #007bff; /* Obwódka */
+  background-color: #f8f9fa; /* Tło */
+  display: flex;
+  align-items: center; /* Wyśrodkowanie zawartości w pionie */
+  justify-content: center; /* Wyśrodkowanie zawartości w poziomie */
+  cursor: pointer; /* Zmiana kursora na rękę */
+  padding: 0;
+  outline: none;
+}
+
+.square-button img {
+  max-width: 80%; /* Maksymalna szerokość obrazka */
+  max-height: 80%; /* Maksymalna wysokość obrazka */
+}
+
+.square-button:active {
+  background-color: #007bff; /* Zmiana tła po naciśnięciu */
+  border-color: #0056b3; /* Zmiana koloru obwódki po naciśnięciu */
+}
