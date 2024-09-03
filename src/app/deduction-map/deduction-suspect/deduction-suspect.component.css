@@ -1,0 +1,17 @@
+.header-image {
+  width: 5rem; /* Stała szerokość */
+  height: 5rem; /* Stała wysokość */
+  margin: 0; /* Usuń marginesy */
+  padding: 0; /* Usuń padding */
+  border: 1px solid black; /* Obwódka */
+  background-color: #f8f9fa; /* Tło */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; /* Uwzględnij obwódkę w szerokości i wysokości */
+}
+
+.header-image img {
+  max-width: 80%; /* Maksymalna szerokość obrazka */
+  max-height: 80%; /* Maksymalna wysokość obrazka */
+}

@@ -2,6 +2,7 @@
   width: 80%; /* Ustaw szerokość kontenera */
   margin: 0 auto; /* Wyśrodkowanie kontenera */
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .button-grid {
