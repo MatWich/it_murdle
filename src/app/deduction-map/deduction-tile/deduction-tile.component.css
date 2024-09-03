@@ -1,7 +1,6 @@
 .square-button {
-  width: 100px; /* Szerokość przycisku */
-  height: 100px; /* Wysokość przycisku, taka sama jak szerokość, aby był kwadratowy */
-  border: 2px solid #007bff; /* Obwódka */
+  width: 5rem; /* Szerokość przycisku */
+  height: 5rem; /* Wysokość przycisku, taka sama jak szerokość, aby był kwadratowy */
   background-color: #f8f9fa; /* Tło */
   display: flex;
   align-items: center; /* Wyśrodkowanie zawartości w pionie */
@@ -16,7 +15,10 @@
   max-height: 80%; /* Maksymalna wysokość obrazka */
 }
 
+.square-button:hover {
+  background-color: #e0e0e0; /* Zmiana koloru tła przy najechaniu */
+}
+
 .square-button:active {
   background-color: #007bff; /* Zmiana tła po naciśnięciu */
-  border-color: #0056b3; /* Zmiana koloru obwódki po naciśnięciu */
 }

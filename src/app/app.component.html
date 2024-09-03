@@ -1,4 +1,4 @@
-<app-header [title]="selectedCaseData.title" />
+<app-header [title]="selectedCaseData!.title" />
 
 @if(isMakingAcusation) {
     <app-accusation-dialog (close)="onCloseMakeAccusation()" />
@@ -8,21 +8,21 @@
         <div class="left-panel">
             <app-suspect-info 
                 header="Suspects" 
-                [suspects]="selectedCaseData.suspects">
+                [suspects]="selectedCaseData!.suspects">
             </app-suspect-info>
             <app-suspect-info
                 header="Places" 
-                [suspects]="selectedCaseData.places">
+                [suspects]="selectedCaseData!.places">
             </app-suspect-info>
             <app-suspect-info 
                 header="Weapons" 
-                [suspects]="selectedCaseData.weapons">
+                [suspects]="selectedCaseData!.weapons">
             </app-suspect-info>
         </div>
         
         <div class="right-panel">
-            <app-lore emote="📓" [lore]="selectedCaseData.introduction" />
+            <app-lore emote="📓" [lore]="selectedCaseData!.introduction" />
             <button class="accusation-button" (click)="onClickMakeAccusation()">Make your accusation</button>
-            <button (click)="toTest()"></button>
+            <app-deduction-grid></app-deduction-grid>
         </div>
     </div>

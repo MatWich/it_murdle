@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AccusationDialogComponent } from './accusation-dialog/accusation-dialog.component';
-import { DATA } from './data';
+import { DeductionGridComponent } from './deduction-map/deduction-grid/deduction-grid.component';
 import { HeaderComponent } from './header/header.component';
 import { LoreComponent } from './lore/lore.component';
 import { MurdleService } from './murdle.service';
@@ -10,7 +10,7 @@ import { SuspectInfoComponent } from './suspect-info/suspect-info.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, SuspectInfoComponent, LoreComponent, AccusationDialogComponent],
+  imports: [RouterOutlet, HeaderComponent, SuspectInfoComponent, LoreComponent, AccusationDialogComponent, DeductionGridComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
