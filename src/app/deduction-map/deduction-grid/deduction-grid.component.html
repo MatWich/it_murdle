@@ -1,0 +1,58 @@
+<div class="grid-container">
+    <!-- Przykład z 6 kolumnami -->
+    <div class="button-grid" data-columns="6">
+      <!-- Nagłówek kolumny (obrazek w pierwszej kolumnie i wierszu) -->
+      @for(image of rowSuspects; track image) {
+        <app-deduction-suspect src="{{ image }}"></app-deduction-suspect>
+      }
+      
+      <!-- Pierwsza kolumna z obrazkami i przyciski -->
+      <app-deduction-suspect src="{{ columntSuspects[0] }}"></app-deduction-suspect>
+      <app-deduction-tile [row]="0" [col]="0"></app-deduction-tile>
+      <app-deduction-tile [row]="0" [col]="1"></app-deduction-tile>
+      <app-deduction-tile [row]="0" [col]="2"></app-deduction-tile>
+      <app-deduction-tile [row]="0" [col]="3"></app-deduction-tile>
+      <app-deduction-tile [row]="0" [col]="4"></app-deduction-tile>
+      <app-deduction-tile [row]="0" [col]="5"></app-deduction-tile>
+
+      <!-- Druga kolumna z obrazkiem i przyciski -->
+      <app-deduction-suspect src="{{columntSuspects[1]}}"></app-deduction-suspect>
+      <app-deduction-tile [row]="1" [col]="0"></app-deduction-tile>
+      <app-deduction-tile [row]="1" [col]="1"></app-deduction-tile>
+      <app-deduction-tile [row]="1" [col]="2"></app-deduction-tile>
+      <app-deduction-tile [row]="1" [col]="3"></app-deduction-tile>
+      <app-deduction-tile [row]="1" [col]="4"></app-deduction-tile>
+      <app-deduction-tile [row]="1" [col]="5"></app-deduction-tile>
+
+      <!-- Druga kolumna z obrazkiem i przyciski -->
+      <app-deduction-suspect src="{{columntSuspects[2]}}"></app-deduction-suspect>
+      <app-deduction-tile [row]="2" [col]="0"></app-deduction-tile>
+      <app-deduction-tile [row]="2" [col]="1"></app-deduction-tile>
+      <app-deduction-tile [row]="2" [col]="2"></app-deduction-tile>
+      <app-deduction-tile [row]="2" [col]="3"></app-deduction-tile>
+      <app-deduction-tile [row]="2" [col]="4"></app-deduction-tile>
+      <app-deduction-tile [row]="2" [col]="5"></app-deduction-tile>
+    </div>
+    <!-- Przykład z 3 kolumnami -->
+    <div class="button-grid" data-columns="3">
+      <!-- Pierwsza kolumna z obrazkami i przyciski -->
+      <app-deduction-suspect src="{{columntSuspects[3]}}"></app-deduction-suspect>
+      <app-deduction-tile [row]="3" [col]="0"></app-deduction-tile>
+      <app-deduction-tile [row]="3" [col]="1"></app-deduction-tile>
+      <app-deduction-tile [row]="3" [col]="2"></app-deduction-tile>
+
+      
+      <!-- Druga kolumna z obrazkiem i przyciski -->
+      <app-deduction-suspect src="{{columntSuspects[4]}}"></app-deduction-suspect>
+      <app-deduction-tile [row]="4" [col]="0"></app-deduction-tile>
+      <app-deduction-tile [row]="4" [col]="1"></app-deduction-tile>
+      <app-deduction-tile [row]="4" [col]="2"></app-deduction-tile>
+
+  
+      <app-deduction-suspect src="{{columntSuspects[5]}}"></app-deduction-suspect>
+      <app-deduction-tile [row]="5" [col]="0"></app-deduction-tile>
+      <app-deduction-tile [row]="5" [col]="1"></app-deduction-tile>
+      <app-deduction-tile [row]="5" [col]="2"></app-deduction-tile>
+    </div>
+  </div>
+  

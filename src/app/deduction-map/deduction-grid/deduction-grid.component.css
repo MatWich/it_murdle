@@ -1,0 +1,63 @@
+.grid-container {
+  width: 80%; /* Ustaw szerokość kontenera */
+  margin: 0 auto; /* Wyśrodkowanie kontenera */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.button-grid {
+  display: grid;
+  grid-gap: 0; /* Odstępy między elementami ustawione na 0 */
+  list-style-type: none; /* Usuń punktorowanie listy */
+  padding: 0; /* Usuń padding listy */
+  margin: 0; /* Usuń marginesy listy */
+  border-collapse: collapse; /* Ustaw, aby nie było odstępów między elementami w siatce */
+}
+
+.button-grid[data-columns="6"] {
+  grid-template-columns: repeat(7, 5rem); /* 7 kolumn (6 przycisków + 1 dla nagłówków) */
+  grid-template-rows: repeat(auto-fit, 5rem); /* Automatyczna liczba wierszy, każdy o wysokości 5rem */
+}
+
+.button-grid[data-columns="3"] {
+  grid-template-columns: repeat(4, 5rem); /* 4 kolumny (3 przyciski + 1 dla nagłówków) */
+  grid-template-rows: repeat(auto-fit, 5rem); /* Automatyczna liczba wierszy, każdy o wysokości 5rem */
+}
+
+.header-image,
+.square-button {
+  width: 5rem; /* Stała szerokość przycisku i obrazka */
+  height: 5rem; /* Stała wysokość przycisku i obrazka */
+  margin: 0; /* Usuń marginesy */
+  padding: 0; /* Usuń padding */
+  border: 1px solid black; /* Obwódka */
+  background-color: #f8f9fa; /* Tło */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; /* Uwzględnij obwódkę w szerokości i wysokości */
+}
+
+.header-image img {
+  max-width: 80%; /* Maksymalna szerokość obrazka */
+  max-height: 80%; /* Maksymalna wysokość obrazka */
+}
+
+/* Dodanie linii oddzielających dla elementów listy */
+.header-image:not(:last-child) {
+  border-right: 1px solid black; /* Prawa linia oddzielająca */
+}
+
+.header-image:nth-child(-n+7):not(:last-child) {
+  border-bottom: 1px solid black; /* Dolna linia oddzielająca dla pierwszego wiersza */
+}
+
+/* Usuń dolną obwódkę dla ostatniego wiersza */
+.button-grid .header-image:nth-last-child(-n+7) {
+  border-bottom: 0; /* Usuń dolną obwódkę dla ostatniego wiersza w siatce 6 kolumn */
+}
+
+/* Kontrola dla square-button */
+.square-button {
+  border: 1px solid black; /* Dodaj obwódkę, aby upewnić się, że wszystkie przyciski mają tę samą szerokość */
+}
