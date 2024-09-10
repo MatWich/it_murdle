@@ -1,15 +1,19 @@
 <div class="container">
     <div class="header-wrapper">
-      <h2>{{header}}</h2>
-    </div>
-    <div class="squares">
-      @for(suspect of suspects; track suspect.id) {
-        <div class="square">
-            <img src="{{suspect.image}}" alt="person image">
-            <h4>{{suspect.name}}</h4>
-            <p>{{suspect.description}}</p>
-        </div>
+      @for(suspects of suspectesCategories; track suspects) {
+        <button (click)="switchSuspects(suspects)">{{ suspects }}</button>
       }
     </div>
+    @if(selectedSuspects != '') {
+      <div class="squares">
+        @for(suspect of suspects; track suspect.id) {
+          <div class="square">
+              <img src="{{suspect.image}}" alt="person image">
+              <h4>{{suspect.name}}</h4>
+              <p>{{suspect.description}}</p>
+          </div>
+        }
+      </div>
+    }
 </div>
   

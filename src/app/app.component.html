@@ -5,24 +5,12 @@
 }
 
 <div class="container">
-        <div class="left-panel">
-            <app-suspect-info 
-                header="Suspects" 
-                [suspects]="selectedCaseData!.suspects">
-            </app-suspect-info>
-            <app-suspect-info
-                header="Places" 
-                [suspects]="selectedCaseData!.places">
-            </app-suspect-info>
-            <app-suspect-info 
-                header="Weapons" 
-                [suspects]="selectedCaseData!.weapons">
-            </app-suspect-info>
-        </div>
-        
-        <div class="right-panel">
-            <app-lore emote="📓" [lore]="selectedCaseData!.introduction" />
-            <app-deduction-grid></app-deduction-grid>
-            <button class="accusation-button" (click)="onClickMakeAccusation()">Make your accusation</button>
-        </div>
+    <div class="left-panel">
+        <app-suspect-info />
+    </div>    
+    <div class="right-panel">
+        <app-lore emote="📓" [lore]="selectedCaseData!.introduction" />
+        <app-deduction-grid></app-deduction-grid>
+        <button class="accusation-button" (click)="onClickMakeAccusation()">Make your accusation</button>
     </div>
+</div>
