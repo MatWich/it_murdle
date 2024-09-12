@@ -52,4 +52,12 @@ export class SuspectInfoComponent {
         // nothing to do
     }
   }
+
+  getCharacteristics(suspect: any) {
+    let characteristic = ''
+     for(let i = 0; i < suspect.characteristics.length; i++) {
+        characteristic += suspect.characteristics[i] + ' ■ ';
+     }
+    return characteristic.substring(0, characteristic.length - 2);
+  }
 }
