@@ -17,6 +17,10 @@ h2 {
   margin: 0;
 }
 
+h4 {
+  font-size: 0.75rem;
+}
+
 .squares {
   display: flex;
   justify-content: flex-start; /* Wyrównanie kwadratów do lewej */
@@ -24,8 +28,8 @@ h2 {
 }
 
 .square {
-  width: 10rem;
-  height: 16rem;
+  width: 12rem;
+  height: 18rem;
   background-color: lightgray;
   border: 2px solid black;
   border-radius: 10px;

@@ -16,19 +16,22 @@ export class MurdleService {
                     id: '1',
                     name: 'Cambrige Jenkins',
                     image: '../../assets/256.png',
-                    description: 'Likes to build stuff but for some unknown reasons throws big stack trace.'
+                    description: 'Likes to build stuff but for some unknown reasons throws big stack trace.',
+                    characteristics: ['4\'9', 'left-handed', 'white hair']
                 },
                 {
                     id: '2',
                     name: 'Heavy Lifter Gopher',
                     image: '../assets/gopher_lifter.png',
-                    description: 'He runs everything in this place no job or constainer will do anything without him.'
+                    description: 'He runs everything in this place no job or constainer will do anything without him.',
+                    characteristics: ['5\'9', 'right-handed', 'bold']
                 },
                 {
                     id: '3',
                     name: 'Fluffy',
                     image: '../assets/go-fuzz.png',
-                    description: 'He like to play all kind of medival games. That is how he got his shield.'
+                    description: 'He like to play all kind of medival games. That is how he got his shield.',
+                    characteristics: ['5\'2', 'right-handed', 'blue hair']
                 }
             ],
             places: [
@@ -36,39 +39,45 @@ export class MurdleService {
                     id: '1',
                     name: 'EC2',
                     image: '../assets/ec2.png',
-                    description: 'Nobody knows how this place spawns and vanishes.'
+                    description: 'Nobody knows how this place spawns and vanishes.',
+                    characteristics: ['internet']
                 },
                 {
                     id: '2',
                     name: 'Artifactory',
                     image: '../assets/arti.png',
-                    description: 'A factory for artifacts but not for building.'
+                    description: 'A factory for artifacts but not for building.',
+                    characteristics: ['local']
                 },
                 {
                     id: '3',
                     name: '.m2',
                     image: '../assets/m2.png',
-                    description: 'Nobody know what can you find inside it.'
+                    description: 'Nobody know what can you find inside it.',
+                    characteristics: ['local']
                 }
             ],
             weapons: [
                 {
                     id: '1',
-                    name: 'InteliJ',
-                    image: '../assets/ij.png',
-                    description: 'Heavy IDE with lots of features.'
+                    name: 'Stackoverflow',
+                    image: '../assets/stackoverflow.png',
+                    description: 'It comes with many objects.',
+                    characteristics: ['heavy-weight', 'made of mistakes']
                 },
                 {
                     id: '2',
-                    name: 'OH MY ZSH',
-                    image: '../assets/zsh.png',
-                    description: 'There is no color that won\'t came with it.'
+                    name: 'PR without reviewers',
+                    image: '../assets/pr.png',
+                    description: 'Great way to end friday shift.',
+                    characteristics: ['light-weight', 'made of courage']
                 },
                 {
                     id: '3',
-                    name: 'Memory',
+                    name: 'Faulty RAM',
                     image: '../assets/mem.png',
-                    description: 'Might cause objects to dissapear if too many.'
+                    description: 'Might cause objects to dissapear.',
+                    characteristics: ['light-weight', 'made of money grab']
                 },
             ],
             clues: [
