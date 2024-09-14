@@ -81,15 +81,19 @@ export class MurdleService {
                 },
             ],
             clues: [
-                "clue1",
-                "clue2",
-                "clue3",
-                "clue4",
-                "clue5"
+                "The person staying on ec2 was left-handed;",
+                "The person with Stackoverflow didn\'t like the person that was located in .m2;",
+                "The person with Faulty RAM had white hair;",
+                "Heavy Lifter Gopher carried a lot of new commits;",
+                "The build was found half-finished in .m2"
             ],
             hint: "clue4 correct checks",
             additionalHint: "Same additional info that is not given directly by other clues",
-            correctAnswer: "Who, where and with what killed" 
+            correctAnswer: {
+                who: 'Cambrige Jenkins',
+                where: 'Faulty RAM',
+                when: '.m2',
+            } 
         
         }
     ]

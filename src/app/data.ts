@@ -53,27 +53,31 @@ export const DATA = {
                 },
                 {
                     id: '2',
-                    name: 'OH MY ZSH',
-                    image: '../assets/zsh.png',
+                    name: 'PR without reviewers',
+                    image: '../assets/pr.png',
                     description: 'There is no color that won\'t came with it.'
                 },
                 {
                     id: '3',
-                    name: 'Memory',
+                    name: 'Faulty RAM',
                     image: '../assets/mem.png',
                     description: 'Might cause objects to dissapear if too many.'
                 },
             ],
             clues: [
-                "clue1",
-                "clue2",
-                "clue3",
-                "clue4",
-                "clue5"
+                "The person staying on ec2 was left-handed;",
+                "The person with Stackoverflow didn\'t like the person that was located in .m2;",
+                "The person with Faulty RAM had white hair;",
+                "Heavy Lifter Gopher carried a lot of new commits;",
+                "The build was found half-finished in .m2"
             ],
             hint: "clue4 correct checks",
             additionalHint: "Same additional info that is not given directly by other clues",
-            correctAnswer: "Who, where and with what killed" 
+            correctAnswer: {
+                who: 'Cambrige Jenkins',
+                where: '',
+                when: '',
+            } 
         
         }
     ]
