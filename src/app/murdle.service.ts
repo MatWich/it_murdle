@@ -84,27 +84,27 @@ export class MurdleService {
                 {
                     id: 0,
                     info: "The person staying on ec2 was left-handed;",
-                    answer: "what should be marked",
+                    answer: "This implies that Cambrige Jenkins was on EC2",
                 },
                 {
                     id: 1,
                     info: "The person with Stackoverflow didn\'t like the person that was located in .m2;",
-                    answer: "what should be marked",
+                    answer: "Holder of Stackoverflow wasn't in .m2",
                 },
                 {
                     id: 2,
                     info: "The person with Faulty RAM had white hair;",
-                    answer: "what should be marked",
+                    answer: "Cambridge Jenkins had a Faulty RAM",
                 },
                 {
                     id: 3,
                     info: "Heavy Lifter Gopher carried a lot of new commits;",
-                    answer: "what should be marked",
+                    answer: "Heavy Lifter Gopher was in possesion of PR without reviewers",
                 },
                 {
                     id: 4,
                     info: "The build was found half-finished in .m2",
-                    answer: "what should be marked",
+                    answer: "This means that the build failed in .m2",
                 },             
             ],
             hint: "clue4 correct checks",
