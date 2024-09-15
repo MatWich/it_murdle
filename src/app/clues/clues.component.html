@@ -1,0 +1,7 @@
+@for(clue of clues; track clue.id) {
+   <label for="clue">
+        <input type="checkbox"> {{clue.info}}
+   </label>
+   <a href="#" (click)="toggleDetails(clue.id)">({{extendedHintMap[clue.id] ? clue.answer : '?'}})</a>
+   <br />
+}

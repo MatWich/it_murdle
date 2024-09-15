@@ -7,6 +7,7 @@
 <div class="container">
     <div class="left-panel">
         <app-suspect-info />
+        <app-clues [clues]="selectedCaseData!.clues" />
     </div>    
     <div class="right-panel">
         <app-lore emote="📓" [lore]="selectedCaseData!.introduction" />

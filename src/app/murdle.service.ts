@@ -81,11 +81,31 @@ export class MurdleService {
                 },
             ],
             clues: [
-                "The person staying on ec2 was left-handed;",
-                "The person with Stackoverflow didn\'t like the person that was located in .m2;",
-                "The person with Faulty RAM had white hair;",
-                "Heavy Lifter Gopher carried a lot of new commits;",
-                "The build was found half-finished in .m2"
+                {
+                    id: 0,
+                    info: "The person staying on ec2 was left-handed;",
+                    answer: "what should be marked",
+                },
+                {
+                    id: 1,
+                    info: "The person with Stackoverflow didn\'t like the person that was located in .m2;",
+                    answer: "what should be marked",
+                },
+                {
+                    id: 2,
+                    info: "The person with Faulty RAM had white hair;",
+                    answer: "what should be marked",
+                },
+                {
+                    id: 3,
+                    info: "Heavy Lifter Gopher carried a lot of new commits;",
+                    answer: "what should be marked",
+                },
+                {
+                    id: 4,
+                    info: "The build was found half-finished in .m2",
+                    answer: "what should be marked",
+                },             
             ],
             hint: "clue4 correct checks",
             additionalHint: "Same additional info that is not given directly by other clues",
