@@ -28,7 +28,7 @@ export class AppComponent {
   }
 
   get selectedCaseData() {
-      return this.murdleService.getMurdleById(this.murdleId);
+      return this.murdleCase
   }
 
   onClickMakeAccusation() {
