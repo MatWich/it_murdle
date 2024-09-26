@@ -16,13 +16,19 @@ import { SuspectInfoComponent } from './suspect-info/suspect-info.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  selectedCase = '1';
+  murdleId = '1';
   isMakingAcusation = false;
   storyEmote = '📓';
   murdleService: MurdleService = inject(MurdleService);
+  private murdleCase;
+
+
+  constructor() {
+    this.murdleCase = this.murdleService.getMurdleById(this.murdleId);
+  }
 
   get selectedCaseData() {
-      return this.murdleService.getMurdleById(this.selectedCase);
+      return this.murdleService.getMurdleById(this.murdleId);
   }
 
   onClickMakeAccusation() {
@@ -31,6 +37,18 @@ export class AppComponent {
 
   onCloseMakeAccusation() {
     this.isMakingAcusation = false;
+  }
+
+  get places() {
+    return this.murdleCase!.places;
+  }
+
+  get persons() {
+    return this.murdleCase!.suspects;
+  }
+
+  get weapons() {
+    return this.murdleCase!.weapons
   }
 
 }
