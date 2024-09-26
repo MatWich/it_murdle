@@ -1,17 +1,17 @@
 <app-header [title]="selectedCaseData!.title" />
 
 @if(isMakingAcusation) {
-    <app-accusation-dialog (close)="onCloseMakeAccusation()" />
+    <app-accusation-dialog [weapons]="weapons" [places]="places" [persons]="persons" (close)="onCloseMakeAccusation()" />
 }
 
 <div class="container">
     <div class="left-panel">
-        <app-suspect-info />
+        <app-suspect-info [weapons]="weapons" [places]="places" [persons]="persons" />
         <app-clues [clues]="selectedCaseData!.clues" />
     </div>    
     <div class="right-panel">
         <app-lore emote="📓" [lore]="selectedCaseData!.introduction" />
-        <app-deduction-grid></app-deduction-grid>
+        <app-deduction-grid [murdle]="selectedCaseData" />
         <button class="accusation-button" (click)="onClickMakeAccusation()">Make your accusation</button>
     </div>
 </div>

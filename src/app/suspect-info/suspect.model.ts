@@ -3,4 +3,5 @@ export interface Suspect {
     name: string,
     image: string,
     description: string
+    characteristics: string[]
 }
