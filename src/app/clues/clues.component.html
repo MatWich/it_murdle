@@ -1,7 +1,20 @@
 @for(clue of clues; track clue.id) {
-   <label for="clue">
-        <input type="checkbox"> {{clue.info}}
-   </label>
-   <a href="#" (click)="toggleDetails(clue.id)">({{extendedHintMap[clue.id] ? clue.answer : '?'}})</a>
-   <br />
+    <label for="clue.id">
+        <input 
+          type="checkbox" 
+          id="clue.id" 
+          name="clue.id" 
+          [(ngModel)]="checkedClues[clue.id]"
+          (click)="toggleCheckbox(clue.id)"
+        >
+        <span [ngStyle]="{ 'opacity': checkedClues[clue.id] ? '0.5' : '1' }">
+          {{ clue.info }}
+        </span>
+      </label>
+    
+      <a href="#" (click)="toggleDetails(clue.id); $event.preventDefault()">
+        {{ extendedHintMap[clue.id] ? clue.answer : '?' }}
+      </a>
+    
+      <br />
 }

@@ -3,6 +3,8 @@ import { Component, Output, EventEmitter, ModelFunction } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LoreComponent } from '../lore/lore.component';
 import { AccusationModel } from './acusationForm.model';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-accusation-dialog',
@@ -34,10 +36,16 @@ export class AccusationDialogComponent {
     } else {
       console.log("Cmon fill all the fields");
     }
+
+    // check if answer is correct
+
+    // display corresponding  toast
+    this.toastr.success('Hello world!', 'Toastr fun!');
+
     this.close.emit();
   }
 
-  constructor() {
+  constructor(private toastr: ToastrService) {
     this.model = new AccusationModel();
    }
 }
