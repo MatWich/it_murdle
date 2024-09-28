@@ -1,5 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
-import { MurdleService } from '../murdle.service';
+import { Component, Input } from '@angular/core';
 import { type Suspect } from './suspect.model';
 
 @Component({
@@ -10,10 +9,14 @@ import { type Suspect } from './suspect.model';
   styleUrl: './suspect-info.component.css'
 })
 export class SuspectInfoComponent {
-  murdleService = inject(MurdleService);
+  @Input({required: true}) weapons!: Suspect[];
+  @Input({required: true}) persons!: Suspect[];
+  @Input({required: true}) places!: Suspect[];
+  
+  suspects!: Suspect[] ;
   suspectesCategories: string[] = ['Persons', 'Places', 'Weapons']
   selectedSuspects = '';
-  suspects!: Suspect[] ;
+  
 
   switchSuspects(suspectsToDisplay: string) {
     if (suspectsToDisplay === this.selectedSuspects) {
@@ -26,15 +29,15 @@ export class SuspectInfoComponent {
   }
 
   getWeapons() {
-    this.suspects = this.murdleService.getMurdleById('0')!.weapons;
+    this.suspects = this.weapons;
   }
 
   getPersons() {
-    this.suspects = this.murdleService.getMurdleById('0')!.suspects;
+    this.suspects = this.persons
   }
 
   getPlaces() {
-    this.suspects = this.murdleService.getMurdleById('0')!.places;
+    this.suspects = this.places
   }
 
   switchSuspectsInfo(suspectsToDisplay: string) {

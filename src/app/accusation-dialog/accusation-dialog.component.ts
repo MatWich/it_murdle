@@ -1,8 +1,11 @@
 import { NgFor } from '@angular/common';
-import { Component, Output, EventEmitter, ModelFunction } from '@angular/core';
+import { Component, Output, EventEmitter, ModelFunction, input, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LoreComponent } from '../lore/lore.component';
 import { AccusationModel } from './acusationForm.model';
+import { ToastrService } from 'ngx-toastr';
+import { Suspect } from '../suspect-info/suspect.model';
+
 
 @Component({
   selector: 'app-accusation-dialog',
@@ -12,6 +15,9 @@ import { AccusationModel } from './acusationForm.model';
   styleUrl: './accusation-dialog.component.css'
 })
 export class AccusationDialogComponent {
+  @Input({required: true}) places!: Suspect[];
+  @Input({required: true}) weapons!: Suspect[];
+  @Input({required: true}) persons!: Suspect[];
 
   @Output() close = new EventEmitter();
   model: AccusationModel;
@@ -34,10 +40,22 @@ export class AccusationDialogComponent {
     } else {
       console.log("Cmon fill all the fields");
     }
+
+    // check if answer is correct
+
+    // display corresponding  toast
+    this.toastr.success('Hello world!', 'Toastr fun!');
+
     this.close.emit();
   }
 
-  constructor() {
+  constructor(private toastr: ToastrService) {
     this.model = new AccusationModel();
+   }
+
+   ngOnInit() {
+    this.whereOptions = [...this.places.map(place => place.name)]
+    this.howOptions = [...this.weapons.map(weapon => weapon.name)]
+    this.whoOptions = [...this.persons.map(person => person.name)]
    }
 }
