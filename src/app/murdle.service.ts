@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { throws } from 'assert';
+import { AccusationModel } from './accusation-dialog/acusationForm.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MurdleService {
+
+    private currentMurdle: any; 
 
   DATA = {
     cases: [
@@ -111,8 +115,8 @@ export class MurdleService {
             additionalHint: "Same additional info that is not given directly by other clues",
             correctAnswer: {
                 who: 'Cambrige Jenkins',
-                where: 'Faulty RAM',
-                when: '.m2',
+                how: 'Faulty RAM',
+                where: '.m2',
             } 
         
         }
@@ -120,8 +124,25 @@ export class MurdleService {
 }
 
 getMurdleById(id: string) {
-  return this.DATA.cases.find(({id}) => id === id);
+    this.currentMurdle = this.DATA.cases.find(({id}) => id == id)
+  return this.currentMurdle
 }
+
+checkAnswer(answer: AccusationModel) {
+    console.log('answer')
+    console.log(answer)
+    console.log("correct")
+    console.log(this.currentMurdle.correctAnswer)
+    if (answer.how === this.currentMurdle.correctAnswer.how) {
+        console.log("lol")
+    }
+    if(answer.who == this.currentMurdle.correctAnswer.who && answer.how == this.currentMurdle.correctAnswer.how && this.currentMurdle.correctAnswer.where == answer.where) {
+        return true
+    }
+    return false
+}
+
+
 
   constructor() { }
 }
