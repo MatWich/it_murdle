@@ -7,8 +7,8 @@
             <div class="select">
                 <select id="who" [(ngModel)]="model.who" name="who">
                     <option disabled selected>--Select--</option>
-                    <option *ngFor="let item of whoOptions" [value]="item">
-                        {{item}}
+                    <option *ngFor="let who of whoOptions" [value]="who">
+                        {{ who }}
                     </option>
                 </select>
                 <div class="select_arrow"></div>
@@ -20,8 +20,8 @@
             <div class="select">
                 <select id="how" [(ngModel)]="model.how" name="how">
                     <option disabled selected>--Select--</option>
-                    <option *ngFor="let where of whereOptions" [value]="where">
-                        {{ where }}
+                    <option *ngFor="let how of howOptions" [value]="how">
+                        {{ how }}
                     </option>
                 </select>
                 <div class="select_arrow"></div>
@@ -32,8 +32,8 @@
             <div class="select">
                 <select id="where" [(ngModel)]="model.where" name="where">
                     <option disabled selected>--Select--</option>
-                    <option *ngFor="let how of howOptions" [value]="how">
-                        {{ how }}
+                    <option *ngFor="let where of whereOptions" [value]="where">
+                        {{ where }}
                     </option>
                 </select>
                 <div class="select_arrow"></div>
