@@ -8,6 +8,7 @@
     <div class="left-panel">
         <app-suspect-info [weapons]="weapons" [places]="places" [persons]="persons" />
         <app-clues [clues]="selectedCaseData!.clues" />
+        <app-additional-hint [hint]="additionHint" />
     </div>    
     <div class="right-panel">
         <app-lore emote="📓" [lore]="selectedCaseData!.introduction" />

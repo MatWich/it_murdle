@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AccusationDialogComponent } from './accusation-dialog/accusation-dialog.component';
+import { AdditionalHintComponent } from './additional-hint/additional-hint.component';
 import { CluesComponent } from './clues/clues.component';
 import { DeductionGridComponent } from './deduction-map/deduction-grid/deduction-grid.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,7 +12,7 @@ import { SuspectInfoComponent } from './suspect-info/suspect-info.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, SuspectInfoComponent, LoreComponent, AccusationDialogComponent, DeductionGridComponent, CluesComponent],
+  imports: [RouterOutlet, HeaderComponent, SuspectInfoComponent, LoreComponent, AccusationDialogComponent, DeductionGridComponent, CluesComponent, AdditionalHintComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -49,6 +50,10 @@ export class AppComponent {
 
   get weapons() {
     return this.murdleCase!.weapons
+  }
+
+  get additionHint() {
+    return this.murdleCase!.additionalHint
   }
 
 }

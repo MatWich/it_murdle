@@ -1,0 +1,10 @@
+<div class="hint-container">
+    <button 
+    (click)="showHint()" 
+    *ngIf="!hintVisible" 
+    [disabled]="hintVisible" 
+    [ngClass]="{'disabled-button': hintVisible}" class="image-button">
+    </button>
+    <p *ngIf="hintVisible">{{ hint }}</p>
+  </div>
+  
