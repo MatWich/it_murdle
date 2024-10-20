@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MurdleService } from '../murdle.service';
 
 @Component({
   selector: 'app-murdle-map',
@@ -8,5 +9,18 @@ import { Component } from '@angular/core';
   styleUrl: './murdle-map.component.css'
 })
 export class MurdleMapComponent {
+
+
+  constructor(private murdleService: MurdleService) {
+
+  }
+
+  get cases() {
+    return this.murdleService.allCases;
+  }
+
+  selectCase(id: string) {
+    this.murdleService.changeActiveMurdle(id);
+  }
 
 }

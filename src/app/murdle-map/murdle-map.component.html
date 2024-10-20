@@ -1,1 +1,6 @@
-<p>murdle-map works!</p>
+@for(case of cases; track case.id) {
+    <button (click)="selectCase(case.id)">
+        <h1>{{ case.title }}</h1>
+    </button>
+    
+}

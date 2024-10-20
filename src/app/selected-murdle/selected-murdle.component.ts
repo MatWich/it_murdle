@@ -17,7 +17,6 @@ import { SuspectInfoComponent } from '../suspect-info/suspect-info.component';
   styleUrl: './selected-murdle.component.css'
 })
 export class SelectedMurdleComponent {
-  murdleId = '1';
   isMakingAcusation = false;
   storyEmote = '📓';
   murdleService: MurdleService = inject(MurdleService);
@@ -25,7 +24,7 @@ export class SelectedMurdleComponent {
 
 
   constructor() {
-    this.murdleCase = this.murdleService.getMurdleById(this.murdleId);
+    this.murdleCase = this.murdleService.getCurrentMurdle()
   }
 
   get selectedCaseData() {

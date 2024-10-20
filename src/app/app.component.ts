@@ -13,13 +13,16 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  murdleCase
   murdleId = '1'
   constructor(private murdleService: MurdleService) {
-    this.murdleCase = this.murdleService.getMurdleById(this.murdleId);
+    
   }
 
   get title() {
-    return this.murdleCase.title
+    let murdleCase = this.murdleService.getCurrentMurdle()
+    if (murdleCase == undefined) {
+      return "Select your murdle!"
+    }
+    return murdleCase.title
   }
 }
