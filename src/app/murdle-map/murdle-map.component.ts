@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { MurdleService } from '../murdle.service';
 import {Router} from "@angular/router";
 
