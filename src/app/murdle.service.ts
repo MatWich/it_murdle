@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { throws } from 'assert';
 import { AccusationModel } from './accusation-dialog/acusationForm.model';
 
 @Injectable({
@@ -7,7 +6,7 @@ import { AccusationModel } from './accusation-dialog/acusationForm.model';
 })
 export class MurdleService {
 
-    private currentMurdle: any; 
+    private currentMurdle: any;
 
   DATA = {
     cases: [
@@ -15,11 +14,12 @@ export class MurdleService {
             id: '1',
             title: 'Treachery in Build Castle',
             introduction: 'Developer came back from the long journey of OoO. Just in the right time to find failed builds.',
+            title_image: '../assets/circle.png',
             suspects: [
                 {
                     id: '1',
                     name: 'Cambrige Jenkins',
-                    image: '../../assets/256.png',
+                    image: '../assets/256.png',
                     description: 'Likes to build stuff but for some unknown reasons throws big stack trace.',
                     characteristics: ['4\'9', 'left-handed', 'white hair']
                 },
@@ -109,7 +109,7 @@ export class MurdleService {
                     id: 4,
                     info: "The build was found half-finished in .m2",
                     answer: "This means that the build failed in .m2",
-                },             
+                },
             ],
             hint: "clue4 correct checks",
             additionalHint: "Same additional info that is not given directly by other clues",
@@ -117,13 +117,13 @@ export class MurdleService {
                 who: 'Cambrige Jenkins',
                 how: 'Faulty RAM',
                 where: '.m2',
-            } 
-        
+            }
         },
         {
             id: '2',
             title: 'Murdle in construction',
             introduction: '',
+            title_image: '../assets/circle.png',
             suspects: [
                 {
                     id: '1',
@@ -218,7 +218,7 @@ export class MurdleService {
                     id: 4,
                     info: "The build was found half-finished in .m2",
                     answer: "This means that the build failed in .m2",
-                },             
+                },
             ],
             hint: "clue4 correct checks",
             additionalHint: "Same additional info that is not given directly by other clues",
@@ -226,8 +226,8 @@ export class MurdleService {
                 who: 'Cambrige Jenkins',
                 how: 'Faulty RAM',
                 where: '.m2',
-            } 
-        
+            }
+
         },
 
     ]

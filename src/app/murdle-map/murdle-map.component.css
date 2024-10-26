@@ -1,0 +1,5 @@
+.square img {
+   width: auto;
+  height: 3rem;
+  object-fit: scale-down;
+}
