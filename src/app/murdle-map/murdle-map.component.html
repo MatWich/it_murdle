@@ -1,6 +1,9 @@
 @for(case of cases; track case.id) {
     <button (click)="selectCase(case.id)">
-        <h1>{{ case.title }}</h1>
+        <h1>{{case.id}}. {{ case.title }}</h1>
+        <div class="square">
+            <img [src]="case.title_image" alt="title image" />
+        </div>
     </button>
     
 }
