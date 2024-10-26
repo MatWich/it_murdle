@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { MurdleService } from '../murdle.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-murdle-map',
@@ -11,7 +12,7 @@ import { MurdleService } from '../murdle.service';
 export class MurdleMapComponent {
 
 
-  constructor(private murdleService: MurdleService) {
+  constructor(private murdleService: MurdleService, private router: Router) {
 
   }
 
@@ -21,6 +22,7 @@ export class MurdleMapComponent {
 
   selectCase(id: string) {
     this.murdleService.changeActiveMurdle(id);
+    this.router.navigate(['case']);
   }
 
 }
