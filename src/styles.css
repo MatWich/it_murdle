@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
   font-family: 'StoryFont';
-  src: url('./assets/fonts/story-telling.regular.ttf') format('truetype'),
+  src: url('./assets/fonts/story-telling.regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
